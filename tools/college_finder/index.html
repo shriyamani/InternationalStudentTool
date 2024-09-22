@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">  
+  <meta name="description" content="College Finder">
+  <meta name="author" content="Shriya Mani>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <title>College Search</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+
+<body>
+<header> 
+  <div class="container">
+    <h1>College Search</h1>
+    <button class="btn-dark-mode" id="dark-mode">
+    </button>
+</header>
+
+<section>
+  <div class="container">
+      <input
+          class="search"
+          id="search"
+          type="text"
+          placeholder="Search for a College"
+      >
+
+      <section id="result-counters" style="display: none;"></section>
+
+      <a class="btn btn-danger" data-toggle="collapse" href="/index.html" role="button" aria-expanded="false" aria-controls="collapseExample"> Home</a>
+
+  </div>
+</section>
+
+<section>
+  <div class="container countries" id="college-data">
+      <!-- Country cards will be rendered here by JS. -->
+      <h2>Type in the Search Box To begin...</h2>
+  </div>
+</section>
+
+<footer>
+  <button onclick="topFunction()" id="myBtn" class="myBtn" title="Go to top">Top</button>
+  <div id="btn-page-top" class="mt-4" style="display: none;"><a href="#page-top"class="button is-link is-light"></a></div>
+</footer>
+
+
+  </div>
+  <script src="js/jsonsearch.js"></script>
+</body>
+
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+</html>
